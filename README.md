@@ -13,10 +13,12 @@ To identify open ports on devices within the local network and evaluate potentia
 
 ## 📋 Steps Performed
 
-1. **Identified Local IP Range**  
+
+1. **Identified Local IP Range**
+   Used the `ifconfig` command to view the IP address of my active network interface (e.g., `wlan0` or `eth0`), helping determine the subnet (e.g., `192.168.1.0/24`).
    Used `ip a` or  to determine the local IP range (e.g., `192.168.1.0/24`).
 
-2. **Performed TCP SYN Scan**  
+3. **Performed TCP SYN Scan**  
    Executed the command:
 nmap -sS 192.168.1.0/24
 
@@ -35,12 +37,8 @@ Captured traffic while the scan was running to observe mDNS, ARP, or SYN packets
 Used `nmap --top-ports 1000` and service name resolution to determine likely services (e.g., SSH on port 22, HTTP on 80).
 
 6. **Identified Security Risks**  
-- Noted open administrative ports (e.g., Telnet, RDP, FTP) on devices.
 - Highlighted unnecessary services that could be exploited if unpatched.
 
-7. **Saved Results**  
-- Included `scan_results.txt` or exported HTML version.
-- Screenshots showing command usage and results were added to the repo.
 
 ## 🖼️ Included Screenshots
 1. IP range identification  
@@ -48,4 +46,3 @@ Used `nmap --top-ports 1000` and service name resolution to determine likely ser
 3. Scan results  
 4. Wireshark traffic capture  
 5. Open port/services analysis  
-6. Nmap report saved
